@@ -1,6 +1,7 @@
 SampleApp::Application.routes.draw do
 
   resources :users
+  resources :microposts, only: [:create, :destroy]
 
   # -- static pages --
   root to: 'static_pages#home'
